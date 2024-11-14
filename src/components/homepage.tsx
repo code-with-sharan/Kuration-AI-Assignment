@@ -361,6 +361,11 @@ export function Homepage() {
                     <Button
                       className="w-full flex items-center justify-center space-x-2"
                       variant="outline"
+                      onClick={()=>{
+                        if(enrichedData.linkedin_url){
+                          window.open(`https://${enrichedData.linkedin_url}`, '_blank');
+                        }
+                      }}
                     >
                       <span>View Company Profile</span>
                       <ExternalLink className="h-4 w-4" />
